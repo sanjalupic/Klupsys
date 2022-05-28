@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Rezervacija</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar" class="navbar-top">
+            <h1>Klupsys</h1>
+            <nav>
+                <ul>
+                    <li><a href="../navigation/index.html">Home</a></li>
+                    <li><a href="../navigation/tretmani.html">Tretmani</a></li>
+                    <li><a href="#">Rezervacija</a></li>
+                    <li><a href="../navigation/cjenik.html">Cjenik</a></li>
+                    <li><a href="../navigation/kontakt.html">Kontakt</a></li>
+                    <li><a href="../navigation/login.html"><i class="fas fa-user-circle"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <form action="login.html" method="get" class="content">
+        <div>
+            <label>Ime i prezime:<input name="name" id="name" type="text" required></label>
+        </div>
+        <div>
+            <label>E-mail:<input name="email" id="email" type="email"></label>
+        </div>
+        <div>
+            <label>Broj telefona:<input name="telephone" id="telephone" type="tel" required></label>
+        </div>
+        <div>
+            <label>Vrsta tretmana:
+                <select name="group" id="group">
+                    <option>Grupa1</option>
+                    <option>Grupa2</option>
+                    <option>Grupa3</option>
+                    <option>Grupa4</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label>Tretman:
+                <select name="treatment" id="treatment">
+                    <option>Tretman1</option>
+                    <option>Tretman2</option>
+                    <option>Tretman3</option>
+                    <option>Tretman4</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label>Datum:<input name="date" id="date" type="date" required></label>
+        </div>
+        <div>
+            <label>Vrijeme:<input name="time" id="time" type="time" required></label>
+        </div>
+        <button type="submit">Rezerviraj</button>
+    </form>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+        <p>Copyright &copy; 2022 - Kozmetički salon Klupsy</p>
+    </footer>
+</body>
+
+</html>
