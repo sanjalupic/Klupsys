@@ -102,14 +102,14 @@
 
   <div class="left-right">
         <span></span>
-        <a><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+        <a href="rezervacija2.php"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
         <?php
-            $week = date('w');
+            $week = date('w') + 2*7;
             $first_day_of_week = date('d.m.Y', strtotime("+". (intval($week/7)*7-($week%7-1)) ." days"));
             $last_day_of_week = date('d.m.Y', strtotime("+". (intval($week/7)*7-($week%7-1)+4) ."days"));
             echo "<span>" .$first_day_of_week ." - " .$last_day_of_week ."</span>"
         ?>
-        <a href="rezervacija2.php"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        <a href="rezervacija4.php"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
         <span></span>
   </div>
 

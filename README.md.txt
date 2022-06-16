@@ -4,4 +4,17 @@ Kreirat ćemo web stranicu za kozmetički salon. Stranica će sadržavati opise 
 
 LV1
 
--traženje sadržaja -kreiranje HTML-a -načeti bootstrap
+-traženje sadržaja -kreiranje HTML-a
+
+LV2
+-pronađen sav sadržaj i slike potrebne za kreiranje stranice
+
+LV3
+
+LV4
+-kreiranje baze i početna logika
+
+LV5
+-razrađenja logika upravljanja bazom i web stranicom
+-uređen izgled formi i tjednog rasporeda pomoću CSS-a
+-dinamičko dodavanje sadržaja u raspored

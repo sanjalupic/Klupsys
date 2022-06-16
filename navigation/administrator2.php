@@ -11,7 +11,7 @@
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="356353610861-7bn2jbgc7g6deda9gaod33ldh1ucuco5.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <title>Rezervacija</title>
+    <title>Rezervacije</title>
 </head>
 
 
@@ -32,84 +32,16 @@
         </div>
     </header>
 
-    <?php
-        include("connect.php");
-        date_default_timezone_set('Europe/Sarajevo');
-    ?>
-
-    <form action="insert.php" method="post" class="reservation">
-      <div class = "field-group">
-          <input name="name" id="name" type="text" class = "input-field" placeholder="Ime i prezime" required>
-          <label for="name" class="input-label">Ime i prezime</label>
-      </div>
-      <div class = "field-group">
-          <input name="email" id="email" type="email" class = "input-field" placeholder="E-mail" required>
-          <label for="email" class="input-label">E-mail</label>
-      </div>
-      <div class = "field-group">
-          <input name="telephone" id="telephone" type="tel" class = "input-field" placeholder="Broj telefona" required>
-          <label for="telephone" class="input-label">Broj telefona</label>
-      </div>
-      <script>
-      </script>
-
-      <div class = "field-group">
-            <select name="group" id="group" class = "input-field" placeholder="Odaberi vrstu tretmana">
-                <option value="select">Odaberi vrstu tretmana</option>
-                <?php
-                    $sql = "SELECT * FROM tretmani";
-                    $result = $conn->query($sql);
-                    while($row = $result->fetch_assoc()) {
-                    if($old_res != $row['group']) echo "<option value='". $row['group']. "'>" . $row['group']. "</option>";
-                    $old_res = $row['group'];
-                }
-                ?>
-            </select>
-              <label for="group" class="input-label">Vrsta tretmana</label>
-      </div>
-      <div class = "field-group">
-            <select name="treatment" id="treatment" class = "input-field" placeholder="Odaberi tretman">
-                <option value>Odaberi tretman</option>
-                <?php
-                    $result = $conn->query($sql);
-                    while($row = $result->fetch_assoc()) {
-                        echo "<option value='". $row['treatment']. "'>" . $row['treatment']. "</option>";
-                    }
-                ?>
-            </select>
-            <label for="treatment" class="input-label">Tretman</label>
-      </div>
-      <div class = "field-group">
-          <?php
-            if(date("H")>date("H", strtotime("19:00"))){
-                $min_day = date('Y-m-d', strtotime('+1 day'));
-            }
-            else{
-                $min_day = date('Y-m-d');
-            }
-            $week = date('w') + 3*7;
-            $max_day = date('Y-m-d', strtotime("+". (intval($week/7)*7-($week%7-1)+4) ."days"));
-            echo "<input name='date' id='date' type='date' required class = 'input-field' min='" .$min_day ."' max='" .$max_day ."'>"
-          ?>
-          <label for="date" class="input-label">Datum</label>
-      </div>
-      <div class = "field-group">
-          <input name="time" id="time" type="time" required class = "input-field" min="13:00" max="20:00">
-          <label for="time" class="input-label">Vrijeme</label>
-      </div>
-      <button type="submit" class="button-submit">Rezerviraj</button>
-  </form>
-
-  <div class="left-right">
+    <div class="left-right">
         <span></span>
-        <a><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+        <a href="administrator1.php"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
         <?php
-            $week = date('w');
+            $week = date('w') + 1*7;
             $first_day_of_week = date('d.m.Y', strtotime("+". (intval($week/7)*7-($week%7-1)) ." days"));
             $last_day_of_week = date('d.m.Y', strtotime("+". (intval($week/7)*7-($week%7-1)+4) ."days"));
             echo "<span>" .$first_day_of_week ." - " .$last_day_of_week ."</span>"
         ?>
-        <a href="rezervacija2.php"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        <a href="administrator3.php"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
         <span></span>
   </div>
 
@@ -201,7 +133,8 @@
               }
               $from_to = $start ."-" .$end;
               $style = "height:" .$duration . "px; grid-row:" .$roww ."; grid-column:" .$column ."/" .$column ."; background: " .$color .";";
-              echo "<div class='slot' style='" .$style ."'>Rezervirano (" .$from_to .")</a></div>";
+              $additional_info = $row['name'] .", " .$row['email'] .", " .$row['number'];
+              echo "<div class='slot' style='" .$style ."'><a href='' style='text-decoration:none; color=black;' title='" .$additional_info ."'>" .$row['treatment'] ."(" .$from_to .")</a></div>";
           }
       }
   ?>
