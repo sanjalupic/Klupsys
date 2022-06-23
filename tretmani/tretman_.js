@@ -17,11 +17,23 @@ window.onscroll = function () {
     }
 };
 
-var counter = 10;
-setInterval(function () {
-    document.getElementById('radio' + counter).checked = true;
-    counter = counter + 10;
-    if (counter > 40) {
-        counter = 10;
-    }
-}, 3000);
+var counter = 1;
+if (document.getElementById('radio' + counter + 'f')) {
+    setInterval(function () {
+        document.getElementById('radio' + counter + 'f').checked = true;
+        counter++;
+        if (counter > 4) {
+            counter = 1;
+        }
+    }, 3000);
+}
+
+else if (document.getElementById('radio' + counter + 't')) {
+    setInterval(function () {
+        document.getElementById('radio' + counter + 't').checked = true;
+        counter++;
+        if (counter > 3) {
+            counter = 1;
+        }
+    }, 4000);
+}

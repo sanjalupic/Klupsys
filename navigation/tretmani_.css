@@ -15,8 +15,8 @@ body {
 }
 
 .flex-grid img {
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
     padding: 5px;
     flex: 100%;
 }
@@ -24,8 +24,8 @@ body {
 
 .flex-grid p {
     padding-top: -200px;
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
     position: absolute;
     margin-top: -500px;
     font-size: 30px;
@@ -38,11 +38,11 @@ body {
 }
 
 .flex-grid .box:hover img {
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
 .flex-grid .box:hover p {
-    color: black;
+    color: #766ee9;
     visibility: visible;
 
 }

@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../navigation/style.css">
     <link rel="stylesheet" href="tretmani.css">
     <title>Fibroblast tretman: korekcija očnih kapaka</title>
 </head>
 
 <body>
     <header>
-        <div class="navbar" class="navbar-top">
+        <div id="navbar" class="navbar">
             <h1>Klupsy</h1>
             <nav>
                 <ul>
@@ -26,15 +27,16 @@
         </div>
     </header>
 
-    <h1>Fibroblast tretman: korekcija očnih kapaka</h1>
+    <div class="introduction">
+        <h1>Fibroblast tretman: korekcija očnih kapaka</h1>
+    </div>
 
-    <h4>Što je Purebeau Fibroblast tretman?</h4>
-    <p>
+    <p class="preface">
         Purebeau Fibroblast (plazma terapija) najnovija je tehnologija koja predstavlja veliki pomak u anti-age
         tretmanima.
     </p>
 
-    <h4>Područje djelovanja:</h4>
+    <h2>Područje djelovanja:</h2>
     <p>
         podizanje očnih kapaka i peglanje bora
         <br>uklanjanje ožiljaka i ožiljaka od akni
@@ -42,7 +44,7 @@
         <br>uklanjanje staračkih pjega i mrlja nastalih od sunca
     </p>
 
-    <h4>Detalji tretmana</h4>
+    <h2>Detalji tretmana</h2>
     <p>
         Purebeau Fibroblast olovka proizvodi na svom vrhu plazma blic, odnosno elektrostatičko pražnjenje. Plazma blic
         prelazi sa vrha olovke na površinu kože gdje nastaje mikromilimetarska točka koja zateže kožu. Daljnje točke se
@@ -63,6 +65,44 @@
         <br>Nakon tretmana najvaznije je kožu stititi od sunca i pridržavati se dobivenih pismenih uputa za njegu kože
         koje smo za Vas pripremili.
     </p>
+    <br>
+    <h2>Slike tretmana</h2>
+    <div class="contentt">
+        <!-- image slider start -->
+        <div class="slidert">
+            <!-- image slider start -->
+            <div class="slidest">
+                <!-- radio buttons start -->
+                <input type="radio" name="radio-btn" id="radio1t">
+                <input type="radio" name="radio-btn" id="radio2t">
+                <input type="radio" name="radio-btn" id="radio3t">
+                <!-- radio buttons end -->
+                <!-- slide images start -->
+                <div class="slidest first">
+                    <img src="/img/tretman11/pic1.jpg" alt="">
+                </div>
+                <!-- sve ostale clase su slide -->
+                <div class="slidet">
+                    <img src="/img/tretman11/pic2.jpg" alt="">
+                </div>
+                <div class="slidet">
+                    <img src="/img/tretman11/pic3.jpg" alt="">
+                </div>
+                <!-- slide images end -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+        <p>Copyright &copy; 2022 - Kozmetički salon Klupsy</p>
+    </footer>
+
+    <script src="../tretmani/tretman_.js"></script>
+
 
 </body>
 

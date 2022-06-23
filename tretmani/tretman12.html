@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../navigation/style.css">
     <link rel="stylesheet" href="tretmani.css">
     <title>7D HIFU (Fokusirani ultrazvuk visokog intenziteta)</title>
 </head>
 
 <body>
     <header>
-        <div class="navbar" class="navbar-top">
+        <div id="navbar" class="navbar">
             <h1>Klupsy</h1>
             <nav>
                 <ul>
@@ -26,10 +27,12 @@
         </div>
     </header>
 
-    <h1>7D HIFU (Fokusirani ultrazvuk visokog intenziteta)</h1>
+    <div class="introduction">
+        <h1>7D HIFU (Fokusirani ultrazvuk visokog intenziteta)</h1>
+    </div>
 
-    <h4>Hifu tretman</h4>
-    <p>
+    <h2>Hifu tretman</h2>
+    <p lass="preface">
         Prateći američke trendove u razvoju tretmana pomlađivanja, Europa je već oduševljena učincima nove HIFU
         tehnologije zatezanja kože poznate kao “soft” facelift.
         <br>Efekti su odlični te se smatra da trenutno ne postoji bolja metoda za zatezanje lica i vrata, ali i trbuha,
@@ -38,7 +41,7 @@
         zamjenjuje novim i jačim.
     </p>
 
-    <h4>Prednosti HIFU tretmana:</h4>
+    <h2>Prednosti HIFU tretmana:</h2>
     <p>
         Uklanja bore na čelu
         <br>Zateže i podiže obrve za 3-4 mm
@@ -62,6 +65,45 @@
         za blago pooštravanje i podizanje. Ove vrste tretmana u kombinaciji mogu biti odličan način za održavanje
         mladenačkog izgleda i usporavanja procesa starenja.
     </p>
+
+    <br>
+    <h2>Slike tretmana</h2>
+    <div class="contentt">
+        <!-- image slider start -->
+        <div class="slidert">
+            <!-- image slider start -->
+            <div class="slidest">
+                <!-- radio buttons start -->
+                <input type="radio" name="radio-btn" id="radio1t">
+                <input type="radio" name="radio-btn" id="radio2t">
+                <input type="radio" name="radio-btn" id="radio3t">
+                <!-- radio buttons end -->
+                <!-- slide images start -->
+                <div class="slidest first">
+                    <img src="/img/tretman12/pic1.jpg" alt="">
+                </div>
+                <!-- sve ostale clase su slide -->
+                <div class="slidet">
+                    <img src="/img/tretman12/pic2.jpg" alt="">
+                </div>
+                <div class="slidet">
+                    <img src="/img/tretman12/pic3.jpg" alt="">
+                </div>
+                <!-- slide images end -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+        <p>Copyright &copy; 2022 - Kozmetički salon Klupsy</p>
+    </footer>
+
+    <script src="../tretmani/tretman_.js"></script>
+
 
 </body>
 

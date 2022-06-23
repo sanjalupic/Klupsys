@@ -3,7 +3,7 @@ let scrolled = false;
 
 window.onscroll = function () {
     if (window.pageYOffset > 100) {
-        navbar.classList.remove('top');
+        navbar.classList.add('top');
         if (!scrolled) {
             navbar.style.transform = 'translateY(-100px)';
         }
@@ -12,7 +12,7 @@ window.onscroll = function () {
             scrolled = true;
         }, 200);
     } else {
-        navbar.classList.add('top');
+        navbar.classList.remove('top');
         scrolled = false;
     }
 };
@@ -24,4 +24,4 @@ setInterval(function () {
     if (counter > 7) {
         counter = 1;
     }
-}, 5000);
+}, 3000);

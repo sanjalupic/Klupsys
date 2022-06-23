@@ -103,69 +103,96 @@ p {
   justify-content: center;
 }
 
-.slider_ {
-  width: 900px;
-  height: 500px;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 20px auto;
-}
-
-.slides_ {
-  width: 50vw;
-  height: 500px;
-  display: flex;
-}
-
-.slides_ input {
-  display: none;
-}
-
-.slide_ {
-  width: 50vw;
-  transition: 2s;
-}
-
-.slide_ img {
-  width: 50vw;
-  height: 50vh;
-}
-
-#radio10:checked~.first {
-  margin-left: 0;
-}
-
-#radio20:checked~.first {
-  margin-left: -50vw;
-}
-
-#radio30:checked~.first {
-  margin-left: -100vw;
-}
-
-#radio40:checked~.first {
-  margin-left: -150vw;
-}
-
-
-/* automatic */
-
-.navigation-auto {
-  display: flex;
-  width: 50vw;
-  justify-content: center;
-  margin-top: 460px;
-}
-
-.navigation-auto div {
-  border: 3px solid black;
-  padding: 5px;
-  border-radius: 10px;
-  transition: 1s;
-}
 
 .preface {
   justify-content: center;
   text-align: center;
   font-size: 25px;
+}
+
+.introduction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../img/salon/pic1.JPG') no-repeat center center/cover;
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 10px;
+}
+
+.contentt {
+  margin: 0 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0;
+}
+
+.slidert {
+  width: 100wv;
+  height: 90%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slidest {
+  width: 50vw;
+  height: 90%;
+  display: flex;
+}
+
+.slidest input {
+  display: none;
+}
+
+.slidet {
+  width: 100%;
+}
+
+.slidest img {
+  width: 50vw;
+  height: 90vh;
+  margin: 0 10vw;
+  padding: 70px 70px;
+}
+
+/*4*/
+#radio1f:checked~.first {
+  margin-left: 0;
+}
+
+#radio2f:checked~.first {
+  margin-left: -58vw;
+}
+
+#radio3f:checked~.first {
+  margin-left: -110vw;
+}
+
+#radio4f:checked~.first {
+  margin-left: -160vw;
+}
+
+/*3*/
+
+#radio1t:checked~.first {
+  margin-left: 0;
+}
+
+#radio2t:checked~.first {
+  margin-left: -58vw;
+}
+
+#radio3t:checked~.first {
+  margin-left: -110vw;
+}
+
+img {
+  width: 50vw;
+  height: 70vh;
+  margin: 0 30%;
+  padding: 70px 70px;
 }
